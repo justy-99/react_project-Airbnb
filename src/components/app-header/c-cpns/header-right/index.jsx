@@ -13,7 +13,7 @@ const HeaderRight = memo(() => {
     function windowHandleClick() {
       setShowPanel(false)
     }
-    window.addEventListener("click", windowHandleClick, true)
+    window.addEventListener("click", windowHandleClick, true) //事件捕获阶段
     return () => {
       window.removeEventListener("click", windowHandleClick, true)
     }
