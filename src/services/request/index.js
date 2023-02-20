@@ -32,4 +32,5 @@ class HttpRequest {
   }
 }
 
-export default new HttpRequest(BASE_URL, TIMEOUT)
+const service = new HttpRequest(BASE_URL, TIMEOUT)
+export default service
