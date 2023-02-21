@@ -1,5 +1,6 @@
 import React, { memo, useEffect, useState } from 'react'
 import { getHomeGoodPriceData } from '@/services/modules/home'
+import HomeBanner from './c-cpns/home-banner'
 
 const Home = memo(() => {
 
@@ -14,16 +15,8 @@ const Home = memo(() => {
 
   return (
     <div>
-      <div>{highscore.title}</div>
-      <div>{highscore.subtitle}</div>
-      <ul>
-        {
-          highscore.list?.map( item => {
-            return <li key={item.id}>{item.name}</li>
-          })
-        }
-
-      </ul>
+        <HomeBanner/>
+        
     </div>
   )
 })
