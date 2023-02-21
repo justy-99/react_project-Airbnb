@@ -1,22 +1,28 @@
-import React, { memo, useEffect, useState } from 'react'
-import { getHomeGoodPriceData } from '@/services/modules/home'
+import React, { memo, useEffect } from 'react'
 import HomeBanner from './c-cpns/home-banner'
+import { HomeWrapper } from './style'
+import { shallowEqual, useDispatch, useSelector } from 'react-redux'
+import { fetchHomeDataAction } from '@/store/modules/home'
 
 const Home = memo(() => {
+  const { goodPriceInfo } = useSelector((state) => ({
+    goodPriceInfo: state.home.goodPriceInfo
+  }), shallowEqual)
 
-  const [ highscore, setHighScore ] = useState({})
+  const dispatch = useDispatch()
   
   useEffect(() => {
-    getHomeGoodPriceData().then(res => {
-      console.log(res);
-      setHighScore(res)
-    })
-  },[])
+    dispatch(fetchHomeDataAction('payload...'))
+  },[dispatch])
 
   return (
     <div>
-        <HomeBanner/>
-        
+      <HomeBanner/>
+      <HomeWrapper>
+        <div className='content'>
+        content
+        </div>
+      </HomeWrapper>
     </div>
   )
 })
