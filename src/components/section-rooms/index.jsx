@@ -16,4 +16,9 @@ const SectionRooms = memo((props) => {
   )
 })
 
+SectionRooms.propTypes = {
+  roomList: PropTypes.array
+}
+
+
 export default SectionRooms
