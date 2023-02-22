@@ -1,4 +1,5 @@
 import React, { memo } from 'react'
+import PropTypes from 'prop-types'
 import { RoomsWrapper } from './style'
 import RoomItem from '../room-item'
 
