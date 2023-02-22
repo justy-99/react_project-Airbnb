@@ -8,6 +8,7 @@ export const ItemWrapper = styled.div`
 
   .inner {
     width: 100%;
+    cursor: pointer;
   }
 
   .cover {
@@ -37,6 +38,7 @@ export const ItemWrapper = styled.div`
     font-size: 16px;
     font-weight: 700;
 
+    min-height: 50px;
     overflow: hidden;  
     text-overflow: ellipsis; 
     display: -webkit-box; 
