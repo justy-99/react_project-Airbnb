@@ -4,6 +4,7 @@ import { HomeWrapper } from './style'
 import { shallowEqual, useDispatch, useSelector } from 'react-redux'
 import { fetchHomeDataAction } from '@/store/modules/home'
 import HomeSectionV1 from './c-cpns/home-section-v1'
+import HomeSectionV2 from './c-cpns/home-section-v2'
 
 
 const Home = memo(() => {
@@ -30,6 +31,7 @@ const Home = memo(() => {
 
           <HomeSectionV1 infoData={goodPriceInfo}/>
           <HomeSectionV1 infoData={highScoreInfo}/>
+          <HomeSectionV2 infoData={highScoreInfo}/>
 
         </div>
       </HomeWrapper>
