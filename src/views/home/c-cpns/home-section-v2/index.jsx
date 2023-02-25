@@ -7,7 +7,7 @@ import SectionTabs from '@/components/section-tabs'
 
 const HomeSectionV2 = memo((props) => {
 
-  const { infoData } = props
+  const { infoData = {} } = props
 
   const initialName = Object.keys(infoData.dest_list)[0]
   const [name, setName] = useState(initialName)
