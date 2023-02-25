@@ -32,7 +32,7 @@ const Home = memo(() => {
 
           <HomeSectionV1 infoData={goodPriceInfo}/>
           <HomeSectionV1 infoData={highScoreInfo}/>
-          <HomeSectionV2 infoData={discountInfo}/>
+          {!!Object.keys(discountInfo).length && <HomeSectionV2 infoData={discountInfo}/>}
 
         </div>
       </HomeWrapper>
