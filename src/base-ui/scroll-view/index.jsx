@@ -37,12 +37,16 @@ const ScrollView = memo((props) => {
     <ViewWrapper>
       { showLeft && (
         <div className='control left' onClick={e => controlClickHandle(false)}>
-          <IconArrowLeft/>
+          <div style={{zIndex: 10}}>
+            <IconArrowLeft/>
+          </div>
         </div>
       ) }
       { showRight && (
         <div className='control right' onClick={e => controlClickHandle(true)}>
-          <IconArrowRight/>
+          <div style={{zIndex: 10}}>
+            <IconArrowRight/>
+          </div>
         </div>
       ) }
 

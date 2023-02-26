@@ -31,6 +31,9 @@ export const ViewWrapper = styled.div`
     box-shadow: 0px 1px 1px 1px rgba(0,0,0,.14);
     cursor: pointer;
 
+    .zi10 {
+      z-index: 10;
+    }
     &.left {
       left: 0;
       top: 50%;
@@ -38,10 +41,11 @@ export const ViewWrapper = styled.div`
       :before {
         position: absolute;
         content: '';
-        left: 100%;
+        left: 50%;
         width: 200%;
-        height: 100%;
-        background-image: linear-gradient( to left,rgb(255 255 255 / 0),white 50px );
+        height: 250%;
+        background-image: linear-gradient( to left,rgb(255 255 255 / 0),white 66px );
+        pointer-events: none;
       }
     }
 
@@ -49,13 +53,14 @@ export const ViewWrapper = styled.div`
       right: 0;
       top: 50%;
       transform: translate(50%, -50%);
-      :after {
+      :before {
         position: absolute;
         content: '';
-        right: 100%;
+        right: 50%;
         width: 200%;
-        height: 100%;
-        background-image: linear-gradient( to right,rgb(255 255 255 / 0),white 50px );
+        height: 250%;
+        background-image: linear-gradient( to right,rgb(255 255 255 / 0),white 66px );
+        pointer-events: none;
       }
     }
   }
