@@ -35,12 +35,28 @@ export const ViewWrapper = styled.div`
       left: 0;
       top: 50%;
       transform: translate(-50%, -50%);
+      :before {
+        position: absolute;
+        content: '';
+        left: 100%;
+        width: 200%;
+        height: 100%;
+        background-image: linear-gradient( to left,rgb(255 255 255 / 0),white 50px );
+      }
     }
 
     &.right {
       right: 0;
       top: 50%;
       transform: translate(50%, -50%);
+      :after {
+        position: absolute;
+        content: '';
+        right: 100%;
+        width: 200%;
+        height: 100%;
+        background-image: linear-gradient( to right,rgb(255 255 255 / 0),white 50px );
+      }
     }
   }
 `
