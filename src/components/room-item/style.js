@@ -5,6 +5,7 @@ export const ItemWrapper = styled.div`
   box-sizing: border-box;
   width: ${props => props.itemWidth};
   padding: 8px;
+  flex-shrink: 0;
 
   .inner {
     width: 100%;
@@ -24,6 +25,12 @@ export const ItemWrapper = styled.div`
       top: 0;
       width: 100%;
       height: 100%;
+      transition: transform .2s linear;
+
+      :hover {
+        transform: scale(1.05);
+
+      }
     }
   }
 
@@ -38,7 +45,8 @@ export const ItemWrapper = styled.div`
     font-size: 16px;
     font-weight: 700;
 
-    min-height: 50px;
+    line-height: 1.2em;
+    min-height: 2.4em;
     overflow: hidden;  
     text-overflow: ellipsis; 
     display: -webkit-box; 
