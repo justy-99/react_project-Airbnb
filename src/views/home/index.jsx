@@ -33,10 +33,9 @@ const Home = memo(() => {
             <SectionHeader title={goodPriceInfo.title}/>
             <SectionRooms roomList={goodPriceInfo.list}/>
           </div> */}
-
+          {isEmptyO(discountInfo) && <HomeSectionV2 infoData={discountInfo}/>}
           {isEmptyO(goodPriceInfo) && <HomeSectionV1 infoData={goodPriceInfo}/>}
           {isEmptyO(highScoreInfo) && <HomeSectionV1 infoData={highScoreInfo}/>}
-          {isEmptyO(discountInfo) && <HomeSectionV2 infoData={discountInfo}/>}
           {isEmptyO(recommendInfo) && <HomeSectionV2 infoData={recommendInfo}/>}
 
         </div>
