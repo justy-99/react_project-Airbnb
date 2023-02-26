@@ -6,6 +6,7 @@ import { fetchHomeDataAction } from '@/store/modules/home'
 import HomeSectionV1 from './c-cpns/home-section-v1'
 import HomeSectionV2 from './c-cpns/home-section-v2'
 import { isEmptyO } from '@/utils'
+import HomeLongfor from './c-cpns/home-longfor'
 
 
 const Home = memo(() => {
@@ -34,6 +35,7 @@ const Home = memo(() => {
             <SectionRooms roomList={goodPriceInfo.list}/>
           </div> */}
           {isEmptyO(discountInfo) && <HomeSectionV2 infoData={discountInfo}/>}
+          { isEmptyO(longforInfo) && <HomeLongfor infoData={longforInfo}/> }
           {isEmptyO(goodPriceInfo) && <HomeSectionV1 infoData={goodPriceInfo}/>}
           {isEmptyO(highScoreInfo) && <HomeSectionV1 infoData={highScoreInfo}/>}
           {isEmptyO(recommendInfo) && <HomeSectionV2 infoData={recommendInfo}/>}
