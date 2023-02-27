@@ -9,7 +9,7 @@ export const ItemWrapper = styled.div`
     transform: scale(1.1);
   }
   .inner {
-    padding: 8px;
+    padding: 0 8px;
 
     .item-info {
       position: relative;

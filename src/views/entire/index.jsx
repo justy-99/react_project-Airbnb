@@ -1,9 +1,12 @@
 import React, { memo } from 'react'
+import { EntreWrapper } from './style'
 
-const entire = memo(() => {
+const Entire = memo(() => {
   return (
-    <div>entire</div>
+    <EntreWrapper>
+      entire
+    </EntreWrapper>
   )
 })
 
-export default entire
+export default Entire
