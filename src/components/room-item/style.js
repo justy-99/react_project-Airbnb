@@ -26,6 +26,7 @@ export const ItemWrapper = styled.div`
       width: 100%;
       height: 100%;
       transition: transform .2s linear;
+      object-fit: cover;
 
       :hover {
         transform: scale(1.05);
