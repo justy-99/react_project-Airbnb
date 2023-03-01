@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { FooterWrapper } from './style'
 
 const SectionFooter = memo((props) => {
+  const navigate = useNavigate()
   const { name } = props
 
   let showMessage = "显示全部"
@@ -13,7 +14,6 @@ const SectionFooter = memo((props) => {
   }
 
   /** 事件处理的逻辑 */
-  const navigate = useNavigate()
   function moreClickHandle() {
     navigate("/entire")
   }

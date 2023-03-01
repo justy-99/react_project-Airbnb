@@ -10,7 +10,7 @@ const HeaderLeft = memo(() => {
 
   return (
     <LeftWrapper>
-      <div className='logo' onClick={navgiage('/home')}>
+      <div className='logo' onClick={() => {navgiage('/home')}}>
         <Iconlogo/>
       </div>
     </LeftWrapper>
